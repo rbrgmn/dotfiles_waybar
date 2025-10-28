@@ -1,0 +1,109 @@
+{
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "disable-click": true,
+    "all-outputs": true,
+    "format": "{index}"
+  },
+  "sway/language": {
+    "tooltip": false,
+    "format": "<span size='large'>{short}</span>",
+  },
+  "network": {
+    "tooltip": false,
+    "format-wifi": "NET {essid}",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "NET Disconnected"
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "format": "{icon} {volume}%",
+    "format-muted": "VOL Muted",
+    "format-icons": {
+      "headset": "VOL HEAD",
+      "default": "VOL"
+    },
+    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+  },
+  "pulseaudio#microphone": {
+    "tooltip": false,
+    "format": "{format_source}",
+    "format-source": "MIC {volume}%",
+    "format-source-muted": "MIC Muted",
+    "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 5%-",
+    "scroll-step": 5
+  },
+  "clock": {
+    "interval": 10,
+    "tooltip": false,
+    "format": "CLOCK {:%Y-%m-%d %a %I:%M %p}",
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": "BL {percent}%",
+  },
+  "cpu": {
+    "interval": 5,
+    "tooltip": false,
+    "format": "CPU {usage:02d}%",
+    "min-length": 2,
+  },
+  "memory": {
+    "interval": 30,
+    "tooltip": false,
+    "format": "MEM {used:0.1f}G/{total:0.1f}G",
+  },
+  "temperature": {
+    "interval": 60,
+    "tooltip": false,
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+    "critical-threshold": 60,
+    "format": "TEMP {temperatureC}°C",
+    "format-critical": "TEMP {temperatureC}°C",
+  },
+  "battery": {
+    "interval": 5,
+    "tooltip": false,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "BAT {capacity}% {power:0.2f}W {time}",
+    "format-time": "{H}h {M:02d}m",
+    "format-charging": "BAT CHARGING {capacity}%",
+    "format-discharging": "BAT {capacity}% {power:0.2f}W",
+    "format-full": "BAT {capacity}% full"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 5
+  },
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 18,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      }
+    ]
+  },
+  "custom/vpn": {
+    "interval": 10,
+    "format": "{}",
+    "exec": "nmcli con show --active | grep -qE tun* && echo 'VPN Connected' || echo ''",
+    "max-length": "100"
+  }
+}

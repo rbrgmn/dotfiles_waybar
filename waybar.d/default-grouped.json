@@ -1,0 +1,18 @@
+{
+  "custom/hardware-wrap": {
+	"format": "Hardware",
+  },
+
+  "group/groupsystemmetrics": {
+    "orientation": "horizontal",
+    "drawer": {
+      "click-to-reveal": true,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/hardware-wrap",
+      "cpu",
+      "memory",
+    ],
+  },
+}

@@ -1,0 +1,146 @@
+
+* {
+  border: none;
+  font-family: Iosevka Nerd Font;
+  font-size: 14px;
+  font-weight: 700;
+  min-height: 0;
+  margin: 0px 4px;
+  color: white;
+}
+
+window.eDP-1 * {
+  font-size: 15px;
+}
+
+window#waybar {
+  background: #1e1e2e;
+  color: white;
+}
+
+
+#workspaces,
+#language,
+#custom-vpn,
+#network,
+#pulseaudio,
+#pulseaudio.microphone,
+#backlight,
+#cpu,
+#memory,
+#custom-hardware-wrap,
+#temperature,
+#battery,
+#clock,
+#tray {
+  background-color: #585b70;
+  padding: 2px 5px;
+  margin: 5px 4px;
+  border-radius: 3px;
+}
+
+#workspaces {
+  padding: 0px;
+}
+
+#workspaces button {
+  padding: 0px 5px;
+  margin: 0px;
+}
+
+#workspaces button.focused {
+  background-color: #9399b2;
+}
+
+#language {
+  color: #1e1e2e;
+  background-color: #fe640b;
+  font-size: 13px;
+}
+
+#custom-vpn {
+  color: #1e1e1e;
+  background-color: #fe640b;
+}
+
+#network {
+}
+
+#pulseaudio {
+  margin-right: 0px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+#pulseaudio.microphone {
+  margin-left: 0px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+#backlight {
+}
+
+#cpu {
+  margin-right: 0px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+#memory {
+  margin-left: 0px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+#custom-hardware-wrap {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#groupsystemmetrics {
+  margin: 0px;
+}
+
+#temperature {
+  margin-left: 0px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+#battery {
+}
+
+#battery.charging {
+  color: #a6e3a1;
+}
+
+#battery.warning:not(.charging) {
+  background-color: #fab387;
+  color: #24283b;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f38ba8;
+  color: #24283b;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#clock {
+}
+
+#tray {
+  color: #ffffff;
+}
+
+#tray menu * {
+  background: blue;
+  color: black;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
