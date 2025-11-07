@@ -76,7 +76,7 @@
     "format": "BAT {capacity}% {power:0.2f}W {time}",
     "format-time": "{H}h {M:02d}m",
     "format-charging": "BAT CHARGING {capacity}%",
-    "format-discharging": "BAT {capacity}% {power:0.2f}W",
+    "format-discharging": "BAT {capacity}% {power:0.2f}W {time}",
     "format-full": "BAT {capacity}% full"
   },
   "tray": {
