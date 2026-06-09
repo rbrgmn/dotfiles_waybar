@@ -19,6 +19,7 @@ window#waybar {
 
 
 #workspaces,
+#privacy,
 #language,
 #custom-vpn,
 #network,
@@ -63,6 +64,10 @@ window#waybar {
 
 #language {
   color: #1e1e2e;
+  background-color: #fe640b;
+}
+
+#privacy {
   background-color: #fe640b;
 }
 

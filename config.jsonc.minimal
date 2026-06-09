@@ -38,14 +38,13 @@
       "clock",
     ],
     "modules-center": [
+      "privacy",
       "sway/workspaces"
     ],
     "modules-right": [
       "sway/language",
       "pulseaudio",
-      "pulseaudio#microphone",
       "cpu",
-      "memory",
       "battery",
       "tray"
     ]
