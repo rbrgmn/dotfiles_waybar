@@ -7,7 +7,7 @@
   },
   "sway/language": {
     "tooltip": false,
-    "format": "<span size='large'>{short}</span>",
+    "format": "<span>{short}</span>",
   },
   "network": {
     "tooltip": false,
@@ -41,7 +41,7 @@
   "clock": {
     "interval": 10,
     "tooltip": false,
-    "format": "CLOCK {:%Y-%m-%d %a %I:%M %p}",
+    "format": "{:%I:%M %p}",
   },
   "backlight": {
     "tooltip": false,
@@ -56,15 +56,7 @@
   "memory": {
     "interval": 30,
     "tooltip": false,
-    "format": "MEM {used:0.1f}G/{total:0.1f}G",
-  },
-  "temperature": {
-    "interval": 60,
-    "tooltip": false,
-    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
-    "critical-threshold": 60,
-    "format": "TEMP {temperatureC}°C",
-    "format-critical": "TEMP {temperatureC}°C",
+    "format": "MEM {used:0.1f}G",
   },
   "battery": {
     "interval": 5,
@@ -73,9 +65,9 @@
       "warning": 20,
       "critical": 10
     },
-    "format": "BAT {capacity}% {power:0.2f}W {time}",
+    "format": "BAT {capacity}% {power:0.2f}W",
     "format-time": "{H}h {M:02d}m",
-    "format-charging": "BAT CHARGING {capacity}%",
+    "format-charging": "BAT {capacity}%",
     "format-discharging": "BAT {capacity}% {power:0.2f}W {time}",
     "format-full": "BAT {capacity}% full"
   },
@@ -83,27 +75,10 @@
     "icon-size": 16,
     "spacing": 5
   },
-  "privacy": {
-    "icon-spacing": 4,
-    "icon-size": 18,
-    "transition-duration": 250,
-    "modules": [
-      {
-        "type": "screenshare",
-        "tooltip": true,
-        "tooltip-icon-size": 24
-      },
-      {
-        "type": "audio-in",
-        "tooltip": true,
-        "tooltip-icon-size": 24
-      }
-    ]
-  },
   "custom/vpn": {
     "interval": 10,
     "format": "{}",
     "exec": "nmcli con show --active | grep -qE tun* && echo 'VPN Connected' || echo ''",
     "max-length": "100"
-  }
+  },
 }

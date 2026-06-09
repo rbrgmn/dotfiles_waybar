@@ -1,0 +1,53 @@
+[
+  {
+    "output": "eDP-1",
+    "height": 35,
+    "spacing": 0,
+    "include": [
+      "~/.config/waybar/waybar.d/default-modules.json",
+    ],
+    "modules-left": [
+      "sway/workspaces",
+      "mpris"
+    ],
+    "modules-center": [
+      "privacy",
+    ],
+    "modules-right": [
+      "sway/language",
+      "custom/vpn",
+      "network",
+      "pulseaudio",
+      "pulseaudio#microphone",
+      "backlight",
+      //"group/groupsystemmetrics",
+      "cpu",
+      "memory",
+      //"temperature",
+      "battery",
+      "clock",
+      "tray"
+    ]
+  },
+  {
+    "output": "HDMI-A-1",
+    "include": [
+      "~/.config/waybar/waybar.d/default-modules.json"
+    ],
+    "modules-left": [
+      "clock",
+    ],
+    "modules-center": [
+      "sway/workspaces"
+    ],
+    "modules-right": [
+      "sway/language",
+      "pulseaudio",
+      "pulseaudio#microphone",
+      "cpu",
+      "memory",
+      "battery",
+      "tray"
+    ]
+  }
+]
