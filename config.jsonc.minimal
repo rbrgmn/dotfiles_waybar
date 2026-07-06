@@ -7,25 +7,18 @@
       "~/.config/waybar/waybar.d/default-modules.json",
     ],
     "modules-left": [
-      "sway/workspaces",
-      "mpris"
+      "clock",
     ],
     "modules-center": [
-      "privacy",
+      "sway/workspaces"
     ],
     "modules-right": [
       "sway/language",
-      "custom/vpn",
-      "network",
       "pulseaudio",
       "pulseaudio#microphone",
-      "backlight",
-      //"group/groupsystemmetrics",
       "cpu",
       "memory",
-      //"temperature",
       "battery",
-      "clock",
       "tray"
     ]
   },
