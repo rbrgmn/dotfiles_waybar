@@ -7,10 +7,10 @@
       "~/.config/waybar/waybar.d/default-modules.json",
     ],
     "modules-left": [
-      "clock",
+      "sway/workspaces",
     ],
     "modules-center": [
-      "sway/workspaces"
+      "clock"
     ],
     "modules-right": [
       "sway/language",
@@ -28,10 +28,10 @@
       "~/.config/waybar/waybar.d/default-modules.json"
     ],
     "modules-left": [
-      "clock",
+      "sway/workspaces",
     ],
     "modules-center": [
-      "sway/workspaces"
+      "clock"
     ],
     "modules-right": [
       "sway/language",
